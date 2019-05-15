@@ -50,7 +50,7 @@ lazy val testkitSpotifyImpl =
     .settings(commonSettings: _*)
     .settings(name := "docker-testkit-impl-spotify",
               libraryDependencies ++=
-                Seq("com.spotify" % "docker-client" % "8.11.5",
+                Seq("com.spotify" % "docker-client" % "8.11.7",
                     "com.google.code.findbugs" % "jsr305" % "3.0.1"))
     .dependsOn(core)
 
@@ -60,7 +60,7 @@ lazy val testkitSpotifyShadedImpl =
     .settings(commonSettings: _*)
     .settings(name := "docker-testkit-impl-spotify-shaded",
               libraryDependencies ++=
-                Seq("com.spotify" % "docker-client" % "8.11.5" classifier "shaded",
+                Seq("com.spotify" % "docker-client" % "8.11.7" classifier "shaded",
                     "com.google.code.findbugs" % "jsr305" % "3.0.1"),
               target := baseDirectory.value / "target-shaded"
               )
