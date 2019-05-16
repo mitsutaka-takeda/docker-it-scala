@@ -117,10 +117,6 @@ lazy val config =
         Seq(
           "com.iheart" %% "ficus" % "1.4.1",
           "org.scalatest" %% "scalatest" % "3.0.4" % "test"
-        ),
-      publish := scalaVersion map {
-        case x if x.startsWith("2.10") => {}
-        case _                         => publish.value
-      }
+        )
     )
     .dependsOn(core, testkitDockerJavaImpl)
